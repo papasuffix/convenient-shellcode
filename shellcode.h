@@ -1,8 +1,14 @@
 #pragma once
 
+#pragma once
+
+#ifdef _KERNEL_MODE
+#include <wdm.h>
+#else
 #include <basetsd.h>
 #include <corecrt_malloc.h>
 #include <vcruntime_string.h>
+#endif
 
 class shellcode {
 private:
