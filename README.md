@@ -6,7 +6,7 @@ This class assumes all integer literals (int type) passed are intended to be ins
 ```cpp
 const uintptr_t function_address = 0xDEADBEEFDEADBEEF;
 shellcode test = {
-    0x48, 0xC7, 0xC1, 0x14ul,     // mov rcx, 14h - you could have also put 20/0x14 into a variable and passed the variable here
+    0x48, 0xC7, 0xC1, 0x14ul,     // mov rcx, 14h - you could have also put 20/0x14 into a variable and passed it here
     0x48, 0xB8, function_address, // movabs rax, function_address - you could have also passed the value here directly
     0xFF, 0xD0                    // call rax
 };
