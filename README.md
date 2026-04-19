@@ -2,7 +2,7 @@
 Convenient C++ type for both Usermode and Windows Kernelmode allowing you to pass immediates directly into your shellcode definition rather than having to patch them into you're byte array at a certain offset/index later on
 
 # Usage
-This class assumes all integer literals (int type) passed are intended to be instruction **bytes** and will automatically be narrowed down to a UINT8 type. To avoid this make sure to append the l(L)/ul(UL) suffix to any immediate value that is 32bits or under in size so that it does not get truncated and is treated as a 32bit value.
+This class assumes all integer literals (int type) passed are intended to be instruction **bytes** and will automatically be narrowed down to a UINT8 type. To avoid this make sure to append the l(L)/ul(UL) suffix to any immediate value that is 32bits or under in size so that it does not get truncated and is treated as a 32bit value
 ```cpp
 const uintptr_t function_address = 0xDEADBEEFDEADBEEF;
 shellcode test = {
