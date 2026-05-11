@@ -1,7 +1,5 @@
 #pragma once
 
-#pragma once
-
 #ifdef _KERNEL_MODE
 #include <wdm.h>
 #else
